@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuiter - Explore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/c7740f9ef6.js" crossorigin="anonymous"></script>
+    <style>
+        @media (max-width: 768px) {
+            .left-column .text {
+                display: none;
+            }
+            
+            .right-col {
+                display: none;
+            }
+
+            .extra-tab {
+                display: none;
+            }
+        }
+    </style>
+
+   
+</head>
+
+<body>
+    <div class="container-fluid m-5">
+        <div class="row">
+
+        <!-- Left Sidebar -->
+        <aside class="col-md-2 mx-2 mt-2 col-sm-2 col-xxl-2 col-sm-2 col-2">
+
+            <!-- Responsive table wrapper -->
+            <div class="table-responsive">
+                <table class="table table-bordered" style="border: 1px solid #ccc; border-radius: 10px;">
+                    
+                    <!-- Twitter logo as the first row -->
+
+                    <tbody>
+                        <tr>
+                            <td><a class="nav-link" href="#"><i class="fab fa-twitter"></i></a></td>
+                        </tr>
+
+                        <!-- Navigation Links -->
+                        <tr class="border">
+                            <td><a class="nav-link" href="#"><i class="fas fa-home"></i><span class="d-none d-lg-inline"> Home</span></a></td>
+                        </tr>
+
+                        <tr class="bg-primary border text-white">
+                            <td>
+                                <a class="nav-link text-white" href="#">
+                                    <i class="fas fa-compass text-white"></i>
+                                    <span class="d-none d-lg-inline"> Explore</span>
+                                </a>
+                            </td>
+                        </tr>
+                        
+
+                        <tr class="border">
+                            <td><a class="nav-link" href="#"><i class="fas fa-bell"></i><span class="d-none d-lg-inline"> Notifications</span></a></td>
+                        </tr>
+
+                        <tr class="border">
+                            <td><a class="nav-link" href="#"><i class="fas fa-envelope"></i><span class="d-none d-lg-inline"> Messages</span></a></td>
+                        </tr>
+
+                        <tr class="border">
+                            <td><a class="nav-link" href="#"><i class="fas fa-bookmark"></i><span class="d-none d-lg-inline"> Bookmarks</span></a></td>
+                        </tr>
+
+                        <tr class="border">
+                            <td><a class="nav-link" href="#"><i class="fas fa-list"></i><span class="d-none d-lg-inline"> Lists</span></a></td>
+                        </tr>
+
+                        
+                        <tr class="border">
+                            <td><a class="nav-link" href="#"><i class="fas fa-user"></i><span class="d-none d-lg-inline"> Profile</span></a></td>
+                        </tr>
+
+                        <tr class="border">
+                            <td><a class="nav-link" href="#"><i class="fa-solid fa-circle-minus"></i><span class="d-none d-lg-inline"> More</span></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-primary btn-block rounded-pill mt-1" style="width: 100%;">Tweet</button>
+               
+            </div>
+        </aside>
+
+        <!-- Custom CSS -->
+        <style>
+            .nav-link {
+                text-decoration: none;
+                color: black;
+                display: block;
+                padding: .5rem 1rem; 
+            }
+
+            .nav-link:hover {
+                background-color: #f5f5f5;
+            }
+
+            .nav-link i {
+                color: black;
+            }
+            .fa-cog {
+                color: #1da1f2;
+            }
+        </style>
+
+
+
+            <!-- Main Content -->
+            <main class="col-8 col-xxl-5  col-xl-5 col-sm-9 col-md-6">    
+                <div class="container"> 
+                <!-- Bootstrap Row -->
+                    <div class="row pb-2">
+                        <div class="col-md-10"> <!-- Reduced from 12 to 10 for space for gear icon -->
+                            <div class="input-group border border-2 rounded-pill">
+                                <!-- Search Icon (Prepend) -->
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text rounded-pill bg-transparent border-0"><i class="fa fa-search"></i></span>
+                                </div>
+                                <!-- Search Input -->
+                                <input type="text" class="form-control rounded-pill border-0" placeholder="Search Twitter">
+                            </div>
+                        </div>
+                        <!-- Gear Icon -->
+                        <div class="col-md-2 d-flex align-items-center justify-content-end">
+                            <span><i class="fa fa-cog fa-2x"></i></span>  <!-- Adjust the size class (fa-2x) as per your requirement -->
+                        </div>
+                    </div>
+
+                    <div class="">
+
+                        <ul class="nav nav-tabs" id="myTabs">
+                            <!-- Tab links -->
+                            <li class="nav-item">
+                                <a class="nav-link active" id="forYouTab" data-toggle="tab" href="#forYou">For You</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" id="trendingTab" data-toggle="tab" href="#trending">Trending</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" id="newsTab" data-toggle="tab" href="#news">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" id="sportsTab" data-toggle="tab" href="#sports">Sports</a>
+                            </li>
+                            <li class="nav-item extra-tab">
+                                <a class="nav-link text-primary d-none d-sm-block" id="entertainmentTab" data-toggle="tab" href="#entertainment">Entertainment</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="content-item border rounded p-3 mb-0">
+                        <!-- Example content item 1 -->
+                        <div class="row justify-content-center">
+                        <!-- Container for the image and text -->
+                        
+                        
+                    
+                        <div class="position-relative">
+                            <img src="sx.jpg" alt="Descriptive text" class="img-fluid w-100 h-100">
+                            <span class="position-absolute bottom-0 start-0 text-white fw-bold p-3 ms-3" style="font-size: 1.5rem;">SpaceX's Starship</span>
+                        </div>
+                     
+                            
+                        
+
+                        <!-- Example content item 1 -->
+                        <div class="content-item border-top p-3 mb-0">
+                            <div class="row">
+                                <!-- Left column for content -->
+                                <div class="col-md-8">
+                                    <p><light>Web Development</light></p>
+                                    <p><strong>React JS</strong><i class="fa fa-check-circle text-primary"></i></p>
+                                    <p><strong>React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs.</strong></p>
+                                </div>
+                                <!-- Right column for image -->
+                                <div class="col-md-4">
+                                    <img src="react.png" alt="Image 1" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content item 2 -->
+                        <div class="content-item border-top p-3 mb-0">
+                            <div class="row">
+                                <!-- Left column for content -->
+                                <div class="col-md-8">
+                                    <p><strong>JavaScript</strong><i class="fa fa-check-circle text-primary"></i> <light> - 2h </light> </p>
+                                    <p><strong>JavaScript is programming language that can run on browsers as well as desktops</strong></p>
+                                    <p><light>123K Tweets</light></p>
+                                </div>
+                                <!-- Right column for image -->
+                                <div class="col-md-4">
+                                    <img src="js.png" alt="Image 2" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-item border-top p-3 mb-0">
+                            <div class="row">
+                                <!-- Left column for content -->
+                                <div class="col-md-8">
+                                    <p><light>Web Development</light></p>
+                                    <p><strong>jQuery</strong><i class="fa fa-check-circle text-primary"></i></p>
+                                    <p><light>123K Tweets</light></p>
+                                    <p><strong></strong></p>
+                                </div>
+                                <!-- Right column for image -->
+                                <div class="col-md-4">
+                                    <img src="jq.png" alt="Image 1" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        
+                            <!-- Content item 2 -->
+                        <div class="content-item border-top p-3 mb-0">
+                            <div class="row">
+                                <!-- Left column for content -->
+                                <div class="col-md-8">
+                                    <p><light>Web Development</light></p>
+                                    <p><strong>Node JS</strong><i class="fa fa-check-circle text-primary"></i> <light> - 2h </light> </p>
+                                    <p>123K Tweets</p>
+                                </div>
+                                <!-- Right column for image -->
+                                <div class="col-md-4">
+                                    <img src="nj.png" alt="Image 2" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Right Sidebar -->
+            <aside class=" col-xxl-3  col-xl-3 col-md-3 mx-2 mt-2 right-col">
+
+                <!-- Responsive table wrapper -->
+                <div class="table-responsive">
+                    <table class="table table-bordered" style="border: 1px solid #ccc; border-radius: 10px;">
+                        
+
+                        <tbody>
+                            <tr>
+                                <th>Who to follow</th>
+                            </tr>
+
+                            <!-- Row with Account Image, Account Name, and Follow Button -->
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        
+                                        <!-- Account Image -->
+                                        <div class="mr-2">
+                                            <img src="java.png" alt="Account Image" class="rounded-circle" width="40px" height="40px">
+                                        </div>
+
+                                        <!-- Account Name -->
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-0">Java<i class="fa fa-check-circle text-primary"></i></h6>
+                                            <small>@Java</small>
+                                        </div>
+                                        
+                                        <!-- Follow Button -->
+                                        <div>
+                                            <button class="btn btn-primary rounded-pill">Follow</button>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Additional rows can be added as required -->
+
+                           
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        
+                                        <!-- Account Image -->
+                                        <div class="mr-2">
+                                            <img src="RS.jpg" alt="Account Image" class="rounded-circle" width="40px" height="40px">
+                                        </div>
+
+                                        <!-- Account Name -->
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-0">Relativity Space<i class="fa fa-check-circle text-primary"></i></h6>
+                                            <small>@erelativityspace</small>
+                                        </div>
+                                        
+                                        <!-- Follow Button -->
+                                        <div>
+                                            <button class="btn btn-primary rounded-pill">Follow</button>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+
+
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        
+                                        <!-- Account Image -->
+                                        <div class="mr-2">
+                                            <img src="VG.png" alt="Account Image" class="rounded-circle" width="40px" height="40px">
+                                        </div>
+
+                                        <!-- Account Name -->
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-0">Virgin Galactic<i class="fa fa-check-circle text-primary"></i></h6>
+                                            <small>@virgingalactic</small>
+                                        </div>
+                                        
+                                        <!-- Follow Button -->
+                                        <div>
+                                            <button class="btn btn-primary rounded-pill">Follow</button>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        
+                                        <!-- Account Image -->
+                                        <div class="mr-2">
+                                            <img src="nasa.png" alt="Account Image" class="rounded-circle" width="40px" height="40px">
+                                        </div>
+
+                                        <!-- Account Name -->
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-0">NASA<i class="fa fa-check-circle text-primary"></i></h6>
+                                            <small>@nasa</small>
+                                        </div>
+                                        
+                                        <!-- Follow Button -->
+                                        <div>
+                                            <button class="btn btn-primary rounded-pill">Follow</button>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        
+                                        <!-- Account Image -->
+                                        <div class="mr-2">
+                                            <img src="tesla.png" alt="Account Image" class="rounded-circle" width="40px" height="40px">
+                                        </div>
+
+                                        <!-- Account Name -->
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-0">Tesla<i class="fa fa-check-circle text-primary"></i></h6>
+                                            <small>@tesla</small>
+                                        </div>
+                                        
+                                        <!-- Follow Button -->
+                                        <div>
+                                            <button class="btn btn-primary rounded-pill">Follow</button>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </aside>
+
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
